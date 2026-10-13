@@ -3,21 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comidas Argentinas</title> 
-    <link rel="stylesheet" href="style.css"> 
+    <title>Comidas Argentinas</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-      <!-- Para filtros y navegacion -->
+    <header class="filtros">
+      <input type="search" id="buscador" placeholder="buscar por nombre">
+      <select id=""></select>
     </header>
+
 
     <main class="comida-container" id="comidaContainer">
         <!-- Contenido Dinamico -->
-    </main>     
+    </main>    
+
 
     <section class="addFood">
-      <!-- Para el form para agregar comida -->
+      <form id="agregarComidaForm">
+        <h2>Agregar Comida</h2>
+        <Label for="nombre">Nombre de la comida:</Label>
+        <input type="text" id="nombre" placeholder="Nombre de la comida" required >
+        <br>
+        <Label for="provincia">Provincia:</Label>
+        <input type="text" id="provincia" placeholder="provincia" required >
+        <br>
+        <Label for="categoria">categoria</Label>
+        <input type="text" id="categoria" placeholder="categoria" required >
+        <br>
+        <label for="ingredientes">Ingredientes(separados por ,):</label>
+        <input type="text" id="ingredientes" placeholder="Ingredientes" required>
+        <button type="submit">Agregar</button>
+      </form>
     </section>
+
 
     <script type="module" src="./main.js"></script>
 </body>
