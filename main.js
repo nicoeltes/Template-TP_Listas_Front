@@ -1,4 +1,4 @@
-fetch('./data/comidas.json')
+fetch('./data/comidas-extended.json')
   .then(response => response.json())
   .then(data => {
     console.log('Comidas cargadas desde JSON:');
@@ -53,9 +53,22 @@ agregarComida.addEventListener("submit", (event) => {
   filtroCategoria.addEventListener("change", () => {
     let comidasFiltradas = comidas.filter(comida => {
       return comida.categoria.includes(filtroCategoria.value)
+      && comida.provincia.includes(filtroProvincia.value)
 
   })
   mostrarComidas(comidasFiltradas)
 })
 
 })
+function buscar(){
+  let comidasFiltradas = comidas.filter( comida => {
+    return comida.nombre.toLowerCase().includes(busqueda.value.toLowerCase())
+    || comida.Categoria.toLowerCase().includes(busqueda.value.toLowerCase())
+    || comida.Provincia.toLowerCase().includes(busqueda.value.toLowerCase())
+  })
+
+  mostrarComidas(comidasFiltradas)
+}
+filtroCategoria.addEventListener("change" , filtrar)
+filtroProvincia.addEventListener("change" , filtrar)
+busqueda.addEventListener("input" , buscar)
