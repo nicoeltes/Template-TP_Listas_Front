@@ -8,10 +8,6 @@
 body{
 height: 100vh;
 width:210vh;
-display:flex;
-align-items: center;
-justify-content: center;
-gap: 20px;
 }
 .main{
 height: 100% ;
@@ -43,22 +39,19 @@ border-radius: 5px;
 .h2{
 font-family:´Gill 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
 }
+
 .addFood{
-  height: 5rem ;
+  height: 20rem ;
   width: 100%;
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
   flex-direction: column;
-
+  background-color: aqua;
 
 }
 
 .formulario{
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  align-items: flex-end;
-  justify-content: flex-end;
   flex-direction: column;
 }
